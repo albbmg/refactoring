@@ -1,0 +1,5 @@
+<cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
+  <div *cdkVirtualFor="let student of students" class="example-item">
+    {{ student.nombre }} - {{ student.sexo }} - {{ student.nota < 5 ? 'Suspendido' : 'Aprobado' }} - {{ student.ausencias }}
+  </div>
+</cdk-virtual-scroll-viewport>

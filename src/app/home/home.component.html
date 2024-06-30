@@ -1,0 +1,14 @@
+<div *ngIf="students.length > 0; else noData">
+    <table>
+      <tr *ngFor="let student of students">
+        <td>{{ student.nombre }}</td>
+        <td>{{ student.sexo }}</td>
+        <td>{{ student.nota < 5 ? 'Suspendido' : 'Aprobado' }}</td>
+        <td>{{ student.ausencias }}</td>
+      </tr>
+    </table>
+  </div>
+  <ng-template #noData>
+    <p>No hay datos disponibles</p>
+  </ng-template>
+  
